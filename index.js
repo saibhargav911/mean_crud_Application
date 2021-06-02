@@ -1,0 +1,10 @@
+const express = require('express');
+const app=express();
+const bodyParser=require('body-parser');
+const cors=require('cors');
+const {mongoose}=require("./db");
+app.use(bodyParser.json());
+app.use(cors({ origin: 'http://localhost:4200' }));
+const router=require("./controller/employeeController");
+app.use('/employees',router);
+app.listen(3000,()=> console.log('listening on port number 8000'));
