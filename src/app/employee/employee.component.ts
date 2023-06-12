@@ -21,7 +21,7 @@ export class EmployeeComponent implements OnInit {
     if (form)
       form.reset();
     this.employeeService.selectedEmployee = {
-      _id:"",
+      _id:'',
       name:"",
       salary:"",
       emailId:"",
